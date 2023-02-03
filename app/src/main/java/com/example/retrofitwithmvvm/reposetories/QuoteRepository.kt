@@ -12,8 +12,9 @@ import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class QuoteRepository(private val quoteApi: QuoteApi,private val dataBase: QuoteDataBase) {
+class QuoteRepository @Inject constructor(private val quoteApi: QuoteApi,private val dataBase: QuoteDataBase) {
 
     fun getData(
         page: Int,
